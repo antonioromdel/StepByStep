@@ -1,0 +1,114 @@
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    background-color: #e8effa;
+}
+
+.layaout{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layaout__main{
+    display: flex;
+    flex-direction: row;
+    height: 40rem;
+
+}
+
+.main__steps{
+    position: relative;
+    margin-right: 4rem;
+}
+
+.steps__progress, .steps__bar{
+    width: 0.5rem;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    transition: all .3s ease-in-out;
+}
+
+.steps__progress{
+    height: 100%;
+    background-color: #cbd0cc;
+}
+
+.steps__bar{
+    height: 0%;
+    background-color: #009688;
+}
+
+.steps__circles{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.steps__step {
+    background-color: white;
+    border-radius: 5rem;
+    border: 3px solid #cbd0cc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #cbd0cc;
+    transition: all .3s linear;
+}
+
+.steps__step > svg{
+    opacity: 0;
+    width: 3rem;
+    transition: all .3s ease;
+}
+
+.active{
+    border: 3px solid #009688;
+}
+
+.active > svg{
+    opacity: 1;
+}
+
+.main__btns{
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+}
+
+.btns__prev, .btns__next{
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: #006988;
+    padding: 1rem;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.disable{
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
+
